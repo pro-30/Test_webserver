@@ -49,7 +49,13 @@ app.get('/bad',(req,res)=>{
   res.send({
     errorMessage:'This was a bad idea',
   });
-})
+});
+app.get('/project',(req,res)=>{
+  res.render('project.hbs',{
+    pageTitle:'Project Page',
+  });
+});
+
 app.listen(port,()=>{
   console.log(`server is up on port ${port}`);
 });
